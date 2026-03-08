@@ -1,0 +1,255 @@
+:root {
+    --ios-bg: #f8f9fa;
+    --ios-card: #ffffff;
+    --ios-primary: #48ff00;
+    --ios-text: #1c1c1e;
+    --ios-secondary-text: #8e8e93;
+    --ios-border: #d1d1d6;
+    --ios-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-image: url("../assets/img/foodbg3.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: var(--ios-text);
+    line-height: 1.5;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 600px;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+h2 {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    color: var(--ios-text);
+    text-align: center;
+    letter-spacing: -0.5px;
+}
+
+form {
+    background-color: var(--ios-card);
+    border-radius: 14px;
+    padding: 25px;
+    box-shadow: var(--ios-shadow);
+}
+
+label {
+    display: block;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: var(--ios-secondary-text);
+}
+
+input[type="text"],
+input[type="email"],
+textarea,
+select {
+    width: 100%;
+    padding: 12px 16px;
+    font-size: 16px;
+    border: 1px solid var(--ios-border);
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    background-color: var(--ios-card);
+    transition: border-color 0.2s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus,
+select:focus {
+    border-color: var(--ios-primary);
+    outline: none;
+}
+
+textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+select {
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%238e8e93'%3e%3cpath d='M7 10l5 5 5-5z'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 16px center;
+    background-size: 16px;
+}
+
+#menu-info {
+    background-color: rgba(0, 122, 255, 0.05);
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid rgba(0, 122, 255, 0.1);
+}
+
+#menu-nama,
+#menu-harga {
+    margin: 5px 0;
+    font-size: 15px;
+}
+
+#menu-harga {
+    font-weight: 600;
+    color: var(--ios-primary);
+}
+
+img#menu-preview {
+    max-width: 100%;
+    border-radius: 8px;
+    margin: 10px 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+button {
+    background-color: var(--ios-primary);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.2s;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #017701;
+}
+
+button[type="button"] {
+    background-color: transparent;
+    border: 1px solid var(--ios-primary);
+    color: var(--ios-primary);
+    margin-left: 10px;
+    width: auto;
+    display: inline-block;
+}
+
+.kode-container {
+    display: flex;
+    align-items: center;
+}
+
+#kode_pesanan {
+    flex-grow: 1;
+    margin-bottom: 0;
+}
+
+.g-recaptcha {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+}
+
+
+/* OVERTHINK-inspired decorative elements */
+
+.overthink-decoration {
+    text-align: center;
+    margin: 30px 0;
+    position: relative;
+}
+
+.overthink-decoration::before,
+.overthink-decoration::after {
+    content: "";
+    display: inline-block;
+    width: 30%;
+    height: 1px;
+    background-color: var(--ios-border);
+    position: absolute;
+    top: 50%;
+}
+
+.overthink-decoration::before {
+    left: 0;
+}
+
+.overthink-decoration::after {
+    right: 0;
+}
+
+.overthink-text {
+    display: inline-block;
+    padding: 0 15px;
+    color: var(--ios-secondary-text);
+    font-size: 14px;
+    position: relative;
+    font-style: italic;
+}
+
+.menu-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 20px;
+}
+
+.menu-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid var(--ios-border);
+    border-radius: 10px;
+    padding: 10px;
+    cursor: pointer;
+    transition: border-color 0.3s;
+}
+
+.menu-card:hover {
+    border-color: var(--ios-primary);
+}
+
+.menu-card input[type="radio"] {
+    display: none;
+}
+
+.menu-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.menu-card h4 {
+    margin: 8px 0 4px;
+    font-size: 16px;
+}
+
+.menu-card p {
+    font-size: 14px;
+    color: var(--ios-primary);
+    font-weight: bold;
+}
+
+.menu-card input[type="radio"]:checked+img,
+.menu-card input[type="radio"]:checked+h4,
+.menu-card input[type="radio"]:checked+p {
+    border-color: var(--ios-primary);
+}
+
+.menu-card:has(input[type="radio"]:checked) {
+    border-color: var(--ios-primary);
+}
+
+@media (max-width: 480px) {
+    h2 {
+        font-size: 22px;
+    }
+}

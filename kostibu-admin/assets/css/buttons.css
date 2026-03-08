@@ -1,0 +1,148 @@
+/* =========================
+   TOMBOL AKSI (Edit/Delete)
+   ========================= */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 12px;
+    font-size: 14px;
+    border-radius: 4px;
+    text-decoration: none;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    transition: background 0.3s ease;
+    white-space: nowrap;
+    margin: 2px 0;
+    min-width: 90px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.btn i {
+    margin-right: 6px;
+}
+
+.btn-edit {
+    background-color: #28a745;
+}
+.btn-edit:hover {
+    background-color: #218838;
+}
+
+.btn-delete {
+    background-color: #dc3545;
+}
+.btn-delete:hover {
+    background-color: #c82333;
+}
+
+/* =========================
+   TOMBOL SIMPAN (Submit)
+   ========================= */
+.btn-submit {
+    background-color: #66af32;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.btn-submit:hover {
+    background-color: #4c8e26;
+}
+
+/* =========================
+   KONTAINER TOMBOL AKSI
+   ========================= */
+.action-buttons {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+/* =========================
+   TABEL DATA - AGAR TOMBOL RAPI
+   ========================= */
+.table-data td {
+    vertical-align: middle;
+    text-align: center;
+}
+
+/* =========================
+   FORM TAMBAH / EDIT MENU
+   ========================= */
+.form-grid {
+    max-width: 700px;
+    margin: 30px auto;
+    background: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    font-family: 'Poppins', sans-serif;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    gap: 12px;
+    align-items: center;
+    margin-bottom: 18px;
+}
+
+.form-row label {
+    font-weight: 600;
+    color: #333;
+    text-align: right;
+}
+
+.form-row input[type="text"],
+.form-row input[type="number"],
+.form-row input[type="file"],
+.form-row textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.form-row textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.form-row img#preview {
+    max-width: 200px;
+    border-radius: 6px;
+}
+
+/* =========================
+   FORM RESPONSIF
+   ========================= */
+@media (max-width: 600px) {
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .form-row label {
+        text-align: left;
+    }
+
+    .action-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .btn {
+        width: 100%;
+        justify-content: center;
+    }
+}

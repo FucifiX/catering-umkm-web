@@ -1,0 +1,115 @@
+/* Font dan Reset */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f0f2f5;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Container Form */
+.auth-container,
+.login-box {
+    background: #fff;
+    padding: 30px 25px;
+    border-radius: 12px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.05);
+    width: 320px;
+    box-sizing: border-box;
+}
+
+/* Judul */
+.auth-container h2,
+.login-box h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 22px;
+    color: #333;
+}
+
+/* Input */
+.auth-container input[type="text"],
+.auth-container input[type="email"],
+.auth-container input[type="password"],
+.login-box input[type="text"],
+.login-box input[type="email"],
+.login-box input[type="password"] {
+    width: 100%;
+    padding: 10px 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+/* Tombol */
+.auth-container button,
+.login-box button {
+    width: 100%;
+    padding: 10px;
+    background: #8cf740;
+    color: white;
+    border: none;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: background 0.3s ease;
+}
+
+.auth-container button:hover,
+.login-box button:hover {
+    background: #7be636;
+}
+
+/* Opsi tambahan */
+.auth-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    font-size: 13px;
+}
+
+.auth-options a {
+    text-decoration: none;
+    color: #3498db;
+}
+
+/* Footer bawah */
+.auth-footer {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.auth-footer a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+/* Error & Success */
+.error,
+.success {
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.error {
+    background: #ffe6e6;
+    color: #cc0000;
+    border: 1px solid #f5c2c7;
+}
+
+.success {
+    background: #e9fce9;
+    color: #2e7d32;
+    border: 1px solid #c8e6c9;
+}

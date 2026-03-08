@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>KostIBooth</title>
+    <link href="../assets/img/daunicon.png" rel="icon">
+    <link rel="stylesheet" href="Kostiboothcss/kostiboothcss.css">
+</head>
+
+<body>
+    <div class="booth-container">
+        <div class="frame-wrapper">
+            <video id="webcam" autoplay playsinline></video>
+            <img src="../assets/img/frame/frame_kostibu.png" alt="Photo Frame" class="frame-image">
+            <canvas id="snapshot"></canvas>
+        </div>
+        <button id="capture-btn">
+      <img src="../assets/img/cam.png" alt="Take Photo">
+    </button>
+        <div id="countdown"></div>
+    </div>
+
+    <!-- Modal popup -->
+    <div id="photo-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <img id="final-photo" alt="Your KostIBooth Photo">
+            <a id="download-link" download="kostibooth_photo.png">
+                <button>Download Photo</button>
+            </a>
+        </div>
+    </div>
+
+    <!-- MediaPipe & Script -->
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils"></script>
+    <script src="kostiboothjs/kostibooth.js"></script>
+    
+
+
+    <div id="preloader">
+        <div class="loader-ios">
+            <div></div><div></div><div></div><div></div><div></div><div></div>
+            <div></div><div></div><div></div><div></div><div></div><div></div>
+        </div>
+    </div>
+
+</body>
+
+
+
+</html>

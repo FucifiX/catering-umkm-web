@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Landing Page</title>
+  <link href="../assets/img/daunicon.png" rel="icon">
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+
+    body {
+      background: url('../assets/img/kostibooth.png') no-repeat center center fixed;
+      background-size: cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .navigate-btn {
+        position: absolute; /* ✅ Required! */
+        bottom: 130px;       /* Distance from bottom */
+        right: 550px;      /* Distance from right */
+
+        background-color: #51b301; /* iOS greyish style */
+        color: #000;
+        border: none;
+        border-radius: 12px;
+        padding: 15px 30px;
+        font-size: 18px;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        cursor: pointer;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        transition: background-color 0.3s, box-shadow 0.3s;
+    }
+
+
+    .navigate-btn:hover {
+      background-color: #043300;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+  </style>
+</head>
+<body>
+  <button class="navigate-btn" onclick="navigateToPage()">Go to Booth</button>
+
+  <script>
+    function navigateToPage() {
+      // Use relative path for local development
+      window.location.href = "kostibooth.html";
+    }
+  </script>
+
+    <div id="preloader">
+        <div class="loader-ios">
+            <div></div><div></div><div></div><div></div><div></div><div></div>
+            <div></div><div></div><div></div><div></div><div></div><div></div>
+        </div>
+    </div>
+
+
+</body>
+</html>

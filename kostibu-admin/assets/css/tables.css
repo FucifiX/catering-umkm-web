@@ -1,0 +1,186 @@
+/* =========================
+   TABEL DATA MODERN & RAPIH
+   ========================= */
+.table-responsive {
+    overflow-x: auto;
+    width: 100%;
+    margin-top: 15px;
+    border-radius: 8px;
+}
+
+.table-data {
+    min-width: 900px; /* Supaya kolom tidak terlalu sempit */
+    border-collapse: collapse;
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+    table-layout: auto;
+}
+
+/* Header */
+.table-data th {
+    background: linear-gradient(to right, #85d372, #66af32);
+    color: white;
+    font-weight: 600;
+    padding: 12px 14px;
+    white-space: nowrap;
+}
+
+/* Isi tabel */
+.table-data td {
+    padding: 12px 14px;
+    border-bottom: 1px solid #eee;
+    vertical-align: middle;
+    color: #333;
+    background-color: #fff;
+    white-space: nowrap;
+}
+
+/* Ganjil genap */
+.table-data tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+.table-data tbody tr:hover {
+    background-color: #f3faff;
+    transition: 0.2s ease-in-out;
+}
+
+/* Kolom panjang (kecualikan dari nowrap) */
+.table-data td.text-justify {
+    text-align: justify;
+    line-height: 1.6;
+    white-space: normal;
+}
+
+/* Gambar */
+.table-data img {
+    max-width: 60px;
+    height: auto;
+    border-radius: 6px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Tombol Aksi */
+.table-data .action-buttons {
+    display: flex;
+    gap: 6px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.table-data .btn {
+    font-size: 13px;
+    padding: 6px 10px;
+    border-radius: 4px;
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    transition: background 0.2s;
+    border: none;
+    white-space: nowrap;
+}
+
+.table-data .btn i {
+    margin-right: 5px;
+}
+
+.table-data .btn-edit {
+    background-color: #28a745;
+}
+.table-data .btn-edit:hover {
+    background-color: #218838;
+}
+
+.table-data .btn-delete {
+    background-color: #dc3545;
+}
+.table-data .btn-delete:hover {
+    background-color: #c82333;
+}
+
+/* Kolom Harga */
+.table-data td.price {
+    font-weight: 500;
+    color: #2a2a2a;
+    text-align: right;
+    white-space: nowrap;
+}
+
+/* =========================
+   RESPONSIF
+   ========================= */
+@media (max-width: 768px) {
+    .table-data {
+        font-size: 12px;
+    }
+
+    .table-data td img {
+        max-width: 50px;
+    }
+
+    .table-data .action-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .table-data .btn {
+        width: 100%;
+        justify-content: center;
+        margin-bottom: 6px;
+    }
+}
+
+/* Harga rata kanan dan tidak terpotong */
+.table-data td.price {
+    text-align: right;
+    white-space: nowrap;
+    font-weight: 500;
+    color: #2a2a2a;
+}
+
+/* Untuk teks panjang agar tidak kepotong */
+.text-justify {
+    text-align: justify;
+    white-space: normal;
+    line-height: 1.5;
+}
+
+.search-wrapper {
+    position: relative;
+    max-width: 320px;
+    margin-bottom: 15px;
+}
+
+.search-wrapper i {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+    color: #888;
+    font-size: 14px;
+    pointer-events: none;
+}
+
+.search-wrapper input {
+    width: 100%;
+    padding: 10px 14px 10px 38px; /* padding kiri diperbesar agar teks tidak tertimpa ikon */
+    border: 1px solid #ccc;
+    border-radius: 999px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    transition: 0.2s ease;
+}
+
+.search-wrapper input:focus {
+    outline: none;
+    border-color: var(--topbar-color, #8cf740);
+    box-shadow: 0 0 0 3px rgba(140, 247, 64, 0.3);
+}
